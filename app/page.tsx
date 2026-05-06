@@ -23,7 +23,7 @@ export default function Home() {
         ? "border-green-500 line-through opacity-60"
         : "border-orange-500"
     }`;
-  const formatTime = (ms) => {
+  const formatTime = (ms: number) => {
     const sec = Math.floor(ms / 1000);
     const min = Math.floor(sec / 60);
     const hrs = Math.floor(min / 60);
@@ -53,11 +53,11 @@ export default function Home() {
 
   // Delete task by id
 
-  const deleteTask = (id) => {
+  const deleteTask = (id: number) => {
     setTasksList((prev) => prev.filter((t) => t.id !== id));
   };
   // Toggle task completion by id
-  const toggleComplete = (id) => {
+  const toggleComplete = (id: number) => {
     setTasksList((prev) =>
       prev.map((t) => {
         if (t.id !== id) return t;
@@ -73,7 +73,7 @@ export default function Home() {
     );
   };
   // Edit task title by id
-  const openEditModal = (task) => {
+  const openEditModal = (task: any) => {
     setEditTaskId(task.id);
     setEditText(task.title);
     document.getElementById("edit_modal").showModal();
