@@ -253,7 +253,7 @@ export default function Home() {
                   <div className="flex items-center gap-2">
                     <span className="text-xl">{t.avatar}</span>
                     <div>
-                      <div className="font-bold">{t.owner}</div>
+                      <div className="font-bold">{t.owner.name}</div>
                       <div className="text-sm opacity-50">Local</div>
                     </div>
                   </div>
