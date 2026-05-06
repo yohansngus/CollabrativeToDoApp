@@ -293,7 +293,7 @@ export default function Home() {
                 {/* ⏱️ LIVE TIME TRACKING */}
                 <td>
                   {formatTime(
-                    (t.completed ? t.completedAt : now) - t.createdAt,
+                    (t.completed ? (t.completedAt ?? now) : now) - t.createdAt,
                   )}
                 </td>
 
