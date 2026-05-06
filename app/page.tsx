@@ -86,7 +86,10 @@ export default function Home() {
   const openEditModal = (task: any) => {
     setEditTaskId(task.id);
     setEditText(task.title);
-    document.getElementById("edit_modal").showModal();
+    const modal = document.getElementById(
+      "edit_modal",
+    ) as HTMLDialogElement | null;
+    modal?.showModal();
   };
 
   const saveEditTask = () => {
