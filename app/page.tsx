@@ -99,7 +99,9 @@ export default function Home() {
       prev.map((t) => (t.id === editTaskId ? { ...t, title: editText } : t)),
     );
 
-    document.getElementById("edit_modal").close();
+    (
+      document.getElementById("edit_modal") as HTMLDialogElement | null
+    )?.close();
     setEditTaskId(null);
     setEditText("");
   };
