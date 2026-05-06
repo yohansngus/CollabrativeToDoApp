@@ -2,9 +2,19 @@
 import Image from "next/image";
 import React from "react";
 
+type Task = {
+  id: number;
+  title: string;
+  createdAt: number;
+  completed: boolean;
+  completedAt: number | null;
+  owner: { name: string; avatar: string };
+  avatar: string;
+};
+
 export default function Home() {
   const [task, setTask] = React.useState("");
-  const [tasksList, setTasksList] = React.useState([]);
+  const [tasksList, setTasksList] = React.useState<Task[]>([]);
   const [now, setNow] = React.useState(Date.now());
   const [filter, setFilter] = React.useState("all");
   const [editTaskId, setEditTaskId] = React.useState(null);
