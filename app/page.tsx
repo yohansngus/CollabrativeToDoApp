@@ -17,7 +17,7 @@ export default function Home() {
 
   const [currentUser, setCurrentUser] = React.useState(users[0]);
   // task item class based on completion status
-  const tasks = (completed: boolean) =>
+  const tasks = (completed: boolean | undefined) =>
     `text-xl pl-2.5 border-l-4 ${
       completed
         ? "border-green-500 line-through opacity-60"
@@ -47,7 +47,7 @@ export default function Home() {
 
     setTasksList((prev) => [...prev, newTask]);
 
-    document.getElementById("my_modal_3").close();
+    (document.getElementById("my_modal_3") as HTMLDialogElement)?.close();
     setTask("");
   };
 
