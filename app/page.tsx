@@ -184,7 +184,13 @@ export default function Home() {
               <button
                 type="button"
                 className="btn btn-ghost"
-                onClick={() => document.getElementById("edit_modal").close()}
+                onClick={() =>
+                  (
+                    document.getElementById(
+                      "edit_modal",
+                    ) as HTMLDialogElement | null
+                  )?.close()
+                }
               >
                 Cancel
               </button>
@@ -207,7 +213,13 @@ export default function Home() {
             <button
               type="button"
               className="btn btn-sm absolute right-2 top-2"
-              onClick={() => document.getElementById("my_modal_3").close()}
+              onClick={() =>
+                (
+                  document.getElementById(
+                    "my_modal_3",
+                  ) as HTMLDialogElement | null
+                )?.close()
+              }
             >
               ✕
             </button>
