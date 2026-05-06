@@ -122,6 +122,8 @@ export default function Home() {
 
   // 1. Load tasks from localStorage when app starts
   React.useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const saved = localStorage.getItem("tasks");
     if (saved) {
       setTasksList(JSON.parse(saved));
