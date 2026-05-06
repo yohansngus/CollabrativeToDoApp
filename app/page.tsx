@@ -155,7 +155,11 @@ export default function Home() {
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
       <button
         className="btn btn-primary mx-auto w-1/4 mb-4 align-meddled flex rounded-lg shadow-lg"
-        onClick={() => document.getElementById("my_modal_3").showModal()}
+        onClick={() =>
+          (
+            document.getElementById("my_modal_3") as HTMLDialogElement | null
+          )?.showModal()
+        }
       >
         Add Task
       </button>
