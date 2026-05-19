@@ -267,7 +267,7 @@ export default function Home() {
               </th>
               <th>Task</th>
               <th>Owner</th>
-              <th>Time tracking</th>
+              <th>Time Tracking</th>
               <th>Status</th>
             </tr>
           </thead>
